@@ -7,12 +7,20 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/dictionaries
 
 PRODUCT_PACKAGES += \
+    adfree \
     BluetoothExt \
     CellBroadcastReceiver \
+    CMFileManager \
+    DashClock \
+    Flash \
+    Focal \
+    GooManager \
     libemoji \
     LatinImeDictionaryPack \
+    LockClock \
     mGerrit \
     Microbes \
+    NovaLauncher \
     ROMControl \
     Stk \
     su \
@@ -83,9 +91,9 @@ PRODUCT_PACKAGES += \
 
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=Scarabaeus.ogg \
-    ro.config.notification_sound=Antimony.ogg \
-    ro.config.alarm_alert=Scandium.ogg
+    ro.config.ringtone=Old_Phone.ogg \
+    ro.config.notification_sound=Law_N_Order.ogg \
+    ro.config.alarm_alert=Snooze.ogg
 
 PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
