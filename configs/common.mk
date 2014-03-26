@@ -7,7 +7,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/dictionaries
 
 PRODUCT_PACKAGES += \
-    adfree \
     BluetoothExt \
     CellBroadcastReceiver \
     CMFileManager \
