@@ -88,6 +88,13 @@ PRODUCT_PACKAGES += \
     ntfsfix \
     ntfs-3g
 
+# Stagefright FFMPEG plugins
+PRODUCT_PACKAGES += \
+    libstagefright_soft_ffmpegadec \
+    libstagefright_soft_ffmpegvdec \
+    libFFmpegExtractor \
+    libnamparser
+
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Old_Phone.ogg \
