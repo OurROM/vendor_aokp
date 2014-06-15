@@ -11,7 +11,7 @@ $(call inherit-product, vendor/aokp/configs/gsm.mk)
 #PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/mako
 
 # Setup device specific product configuration
-PRODUCT_NAME := ourrom_mako
+PRODUCT_NAME := aokp_mako
 PRODUCT_BRAND := Google
 PRODUCT_DEVICE := mako
 PRODUCT_MODEL := Nexus 4
