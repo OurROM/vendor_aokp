@@ -13,7 +13,6 @@ PRODUCT_PACKAGES += \
     DashClock \
     Flash \
     Focal \
-    GooManager \
     libemoji \
     LatinImeDictionaryPack \
     LockClock \
@@ -25,7 +24,7 @@ PRODUCT_PACKAGES += \
     su \
     SwagPapers \
     Torch \
-    UnicornPorn \
+    UnicornBeam \
     KitKatWhite
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
