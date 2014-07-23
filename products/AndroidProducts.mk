@@ -2,6 +2,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/a510.mk \
     $(LOCAL_DIR)/amami.mk \
     $(LOCAL_DIR)/anzu.mk \
+    $(LOCAL_DIR)/bacon.mk \
     $(LOCAL_DIR)/coconut.mk \
     $(LOCAL_DIR)/d2lte.mk \
     $(LOCAL_DIR)/d800.mk \
@@ -46,6 +47,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/pollux_windy.mk \
     $(LOCAL_DIR)/satsuma.mk \
     $(LOCAL_DIR)/serranoltexx.mk \
+    $(LOCAL_DIR)/sirius.mk \
     $(LOCAL_DIR)/smultron.mk \
     $(LOCAL_DIR)/solana.mk \
     $(LOCAL_DIR)/spyder.mk \
