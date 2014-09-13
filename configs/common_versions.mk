@@ -30,13 +30,30 @@ ifeq ($(BUILD_NUMBER),)
   # from this date/time" value.  Make it start with a non-digit so that
   # anyone trying to parse it as an integer will probably get "0".
   BUILD_NUMBER := OurROM_$(shell echo $(AOKP_BUILD) | cut -d/ -f2)
+    # AOKP_BUILD=<goo version int>/<build string>
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.goo.developerid=aokp \
+        ro.goo.rom=aokp \
+        ro.goo.version=$(shell echo $(AOKP_BUILD) | cut -d/ -f1)
+
+    AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(shell echo $(AOKP_BUILD) | cut -d/ -f2)
+else
+    ifneq ($(AOKP_NIGHTLY),)
+        # AOKP_NIGHTLY=true
+        AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_nightly_$(DATE)
+    else
+        AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_unofficial_$(DATE)
+    endif
 endif
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.aokp.version=$(AOKP_VERSION)
 
 # needed for statistics
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.aokp.branch=$(AOKP_BRANCH) \
-        ro.aokp.device=$(AOKP_PRODUCT)
+    ro.aokp.branch=$(AOKP_BRANCH) \
+    ro.aokp.device=$(AOKP_PRODUCT)
 
 # Camera shutter sound property
 PRODUCT_PROPERTY_OVERRIDES += \
-	persist.sys.camera-sound=1
+	persist.sys.camera-sound=0
